@@ -1,0 +1,330 @@
+/* PostNews.css */
+
+.post-news-page {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.post-news-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.post-news-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.post-header {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-icon {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.form-section {
+  padding: 10px;
+}
+
+/* Floating label form styling */
+.floating-form-group {
+  position: relative;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  z-index: 2;
+}
+
+.custom-input {
+  height: 55px;
+  padding-left: 45px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.custom-textarea {
+  min-height: 150px;
+  padding-top: 35px;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.25);
+  border-color: #4facfe;
+}
+
+.floating-form-group label {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+  color: #6c757d;
+}
+
+.floating-form-group .custom-input:focus ~ label,
+.floating-form-group .custom-input:not(:placeholder-shown) ~ label,
+.floating-form-group .custom-textarea:focus ~ label,
+.floating-form-group .custom-textarea:not(:placeholder-shown) ~ label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+  background-color: white;
+  padding: 0 5px;
+  height: auto;
+  top: -10px;
+  left: 40px;
+}
+
+.floating-form-group .form-select ~ label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+  background-color: white;
+  padding: 0 5px;
+  height: auto;
+  top: -10px;
+  left: 40px;
+}
+
+/* Image upload container */
+.image-upload-container {
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.upload-area.with-preview {
+  display: none;
+}
+
+.upload-area:hover {
+  background-color: #e9ecef;
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-preview {
+  position: relative;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Submit section */
+.submit-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.submit-button {
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+/* Animations */
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+/* Progress bar styling */
+.sentiment-progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+.sentiment-progress .progress-bar {
+  transition: width 0.6s ease;
+}
+
+/* Sentiment analysis info */
+.sentiment-info {
+  display: flex;
+  align-items: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .post-news-page {
+    padding: 30px 0;
+  }
+  
+  .custom-input {
+    height: 50px;
+  }
+  
+  .custom-textarea {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+  
+  .submit-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sentiment-info {
+    margin-bottom: 15px;
+  }
+  
+  .submit-section .d-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Additional status indicators */
+.badge {
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

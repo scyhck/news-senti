@@ -1,0 +1,120 @@
+/* Home.css */
+
+.home-page {
+  overflow-x: hidden;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Carousel Styles with Gradients */
+.custom-carousel {
+  margin-bottom: 2rem;
+}
+
+.gradient-slide {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gradient-1 {
+  background: linear-gradient(135deg, #4158D0 0%, #C850C0 50%, #FFCC70 100%);
+}
+
+.gradient-2 {
+  background: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
+}
+
+.carousel-content {
+  position: static;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature Cards Styling */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+}
+
+.gradient-icon-bg {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* CTA Section Gradient */
+.gradient-cta {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  padding: 5rem 0;
+  margin-top: 3rem;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gradient-slide {
+    min-height: 60vh;
+  }
+  
+  .carousel-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Button Styles */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Accessibility Features */
+.btn:focus, 
+.card:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* Animation for Cards */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feature-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }

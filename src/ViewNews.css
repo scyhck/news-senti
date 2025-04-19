@@ -1,0 +1,26 @@
+/* ViewNews.css */
+.view-news-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.news-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.text-truncate {
+  max-height: 4.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
